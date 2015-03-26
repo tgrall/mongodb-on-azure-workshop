@@ -3,9 +3,10 @@
 #NB: you may prefer to go to https://manage.windowsazure.com, Cloud Services, Dashboard and START
 #  the VMs will be started in parallel
 
+vmprefix="mdoa34-"
+
 # the following settings may be different for you:
 vmservice="mdoa34b"
-vmprefix="mdoa34-"
 
 vmnumber=0
 

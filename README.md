@@ -114,7 +114,7 @@ Go to the [http://portal.azure.com](http://portal.azure.com)
 
 ![](img/vm001.png)
 
-Fill in the Wizzard
+Click on *New*, *Compute*, *Ubuntu Server 14.04 LTS*, then fill in the Wizzard
 
 - Create VM
 	- Host Name: dev01
@@ -329,12 +329,12 @@ copy the file to dev01. From your laptop
 scp -i mdoa mdoa_azure_subscription.publishsettings mdoa@mdoa34.cloudapp.net:/home/mdoa
 ```
 
+then from dev01, import that file to the azure client utility
 ```
 azure account import mdoa_azure_subscription.publishsettings
 ```
 
 then you can test you have access to the subscription:
-
 ```
 azure vm list
 info:    Executing command vm list
@@ -434,7 +434,15 @@ Let's now prepare the scripts and copy them to the main VM (`dev01`).
 
 1- In mdoa-config-automation.sh replace `__XYZ__` with your own MMS Group Id and API Key
 
-2- Copy all the keys and shell scripts to your main VM
+2- change the parameters in the .sh scripts, depending on your environment. For instance, in azure_create_vms.sh, the following needs to be changed: 
+```
+# the following settings may be different for you:
+vmvnetnet="Group mdoa mdoa" #you can get the value with the following command: azure network vnet list
+storageaccountname="mdoa34"
+vmservice="mdoa34b"
+```
+
+3- Copy all the keys and shell scripts to your main VM
 
 ```
 scp -i mdoa mdoa.pem mdoa@mdoa34.cloudapp.net:/home/mdoa
@@ -568,7 +576,7 @@ You can click on the various types of nodes **Shards | Configs | Mongos**
 Let's for example click on the Mongos, since they are the nodes you will be using when you connect to the cluster from the MongoDB Shell or from any application.
 
 
-### USe MongoDB
+### Use MongoDB
 
 
 ##### Connect to MongoDB
@@ -732,6 +740,3 @@ The VMs will be stopped in parallel.
 
 NB: you may prefer to go to https://manage.windowsazure.com, Cloud Services, Dashboard and START
 The VMs will be stopped in parallel.
-
-
-

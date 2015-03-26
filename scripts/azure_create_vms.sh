@@ -3,13 +3,13 @@ vmimage="b39f27a8b8c64d52b05eac6a62ebad85__Ubuntu-14_04_1-LTS-amd64-server-20150
 vmusername="mdoa"
 vmsize="Standard_D1"
 vmsshcert="mdoa.pem"
-vmvnetnet="Group mdoa mdoa" #azure network vnet list
 vmlocation="North Europe"
 vmavailabilityset="mongoDB"
+vmprefix="mdoa34-"
 
 # the following settings may be different for you:
+vmvnetnet="Group mdoa mdoa" #you can get the value with the following command: azure network vnet list
 storageaccountname="mdoa34"
-vmprefix="mdoa34-"
 vmservice="mdoa34b"
 
 vmnumber=0

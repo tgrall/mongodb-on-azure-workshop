@@ -1,7 +1,6 @@
 #!/bin/bash
 
-# the following settings may be different for you:
-vmprefix="mdoa34-" # $vmservice.cloudapp.net
+vmprefix="mdoa34-"
 
 vmnumber=0
 
