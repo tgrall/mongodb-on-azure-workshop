@@ -110,6 +110,8 @@ You shoud now have the following files:
 
 We'll create a first VM named dev01
 
+Go to the [http://portal.azure.com](http://portal.azure.com)
+
 ![](img/vm001.png)
 
 Fill in the Wizzard
