@@ -21,7 +21,7 @@ The main steps for this workshop are:
 
 ## Convention
 
-The prefix used for this environment is `mdoa`, standing for **M**ongo**D**B **o** **A**zure 
+The prefix used for this environment is `mdoa`, standing for **M**ongo**D**B **o**n **A**zure 
 
 Some names have `34` in them. This is a random number that will be chosen differently by each attendee. For instance, mdoa34a for instructors will be replaced by mdoa0123a by one person, mdoa12a by another one and so on.
 
